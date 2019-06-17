@@ -1,0 +1,90 @@
+\documentclass[nofootinbib]{iit}%This has to remain the same
+
+\usepackage{latexsym}% For math symbols
+\usepackage[utf8]{inputenc}% Comes to rescue when non-ASCII characters are used
+\usepackage[final]{graphicx}%Package for enhancement of graphics, rotation and scaling and other features 
+\usepackage{lineno}
+\usepackage{comment}
+\usepackage{units}%Units are formatted properly
+\usepackage{xfrac} %slanted fractions
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subfigure}
+%\usepackage[font=singlespacing,width=.98\textwidth]{subcaption}
+\usepackage{diagbox}
+\usepackage{cite}
+%\usepackage{polyglossia}
+%\usepackage{subfig}
+\captionsetup{format=plain,labelsep=period,indention=0.5cm}
+\usepackage{tabularx,multirow}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage[toc,page]{appendix}
+
+\newcommand{\nuebar}{\ensuremath{\overline{\nu }_{e}}\hspace{1pt}}
+\newcommand{\Ulow}{\ensuremath{^{235}\textrm{U}}\hspace{1pt}}
+
+\author{Xianyi Zhang}
+\degree{Doctor of Philosophy}
+\dept{Department of Physics}
+\title{Energy Scale Study for PROSPECT's Measurement of $^{235}$U Antineutrino Spectrum}
+\date{July 2019}
+
+\begin{document}
+
+\maketitle
+
+\prelimpages
+\begin{acknowledgement}
+\pagenumbering{roman}
+\setcounter{page}{3}
+    I would love to thank everyone.
+\end{acknowledgement}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoftables
+
+\newpage
+\listoffigures
+
+\newpage
+\begin{abstract}
+    Antineutrino from fission nuclear reactors has been widely studied in particle and nuclear physics.
+    In the last ten years, the antineutrino flux and spectrum was measured independently by short baseline reactor experiments. 
+    Both flux and spectrum measurements showed discrepancies comparing to theoretical models based on historical measurements and nuclear databases.
+    These discrepancies hint sterile neutrino oscillation in eV scale, as well as incomplete theoretical model. 
+    PROSPECT, the Precision Reactor Oscillation and Spectrum experiment, was built to probe a sterile neutrino oscillation and precisely measure reactor antineutrino spectrum from a high $^{235}$U enrichment reactor.
+    PROSPECT antineutrino detector is an optically segmented liquid scintillation detector deployed at 7~m to 9~m from the HFIR reactor at ORNL.
+    To characterize the nonlinear detector energy response, a unique calibration and analysis strategy was made to overcome the typical challenge brought by particle multi-segment scatterings in PROSPECT detector.
+    This dissertation details the analysis to calibrate the energy scale of PROSPECT antineutrino detector and PROSPECT's measurement antineutrino spectrum from $^{235}$U reactor.
+    
+\end{abstract}
+
+\textpages
+\pagenumbering{arabic}
+
+\input{Chapter1.tex}
+
+\input{Chapter2.tex}
+
+\input{Chapter3.tex}
+
+\input{Chapter4.tex}
+
+\input{Chapter5.tex}
+
+\input{Chapter6.tex}
+
+\input{Chapter7.tex}
+
+\input{Chapter8.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{reference}
+
+\end{document}
