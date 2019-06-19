@@ -9,19 +9,22 @@
 \usepackage{xfrac} %slanted fractions
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{titlesec}
-\usepackage{caption}
+%\usepackage{caption}
 \usepackage{subfigure}
 %\usepackage[font=singlespacing,width=.98\textwidth]{subcaption}
 \usepackage{diagbox}
 \usepackage{cite}
 %\usepackage{polyglossia}
 %\usepackage{subfig}
-\captionsetup{format=plain,labelsep=period,indention=0.5cm}
+%\captionsetup{format=plain,labelsep=period,indention=0.5cm}
+%\captionsetup[table]{font=singlespacing}
+%\captionsetup[figure]{font=singlespacing}
 \usepackage{tabularx,multirow}
 \usepackage{rotating}
 \usepackage{hyperref}
 \usepackage{mathrsfs}
 \usepackage[toc,page]{appendix}
+\usepackage[export]{adjustbox}
 
 \newcommand{\nuebar}{\ensuremath{\overline{\nu }_{e}}\hspace{1pt}}
 \newcommand{\Ulow}{\ensuremath{^{235}\textrm{U}}\hspace{1pt}}
@@ -54,6 +57,7 @@
 
 \newpage
 \begin{abstract}
+\setlength{\parindent}{0.5in}
     Antineutrino from fission nuclear reactors has been widely studied in particle and nuclear physics.
     In the last ten years, the antineutrino flux and spectrum was measured independently by short baseline reactor experiments. 
     Both flux and spectrum measurements showed discrepancies comparing to theoretical models based on historical measurements and nuclear databases.

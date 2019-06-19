@@ -215,7 +215,9 @@
  \tsp{ABSTRACT \\}        % Creates the title of Abstract page
  \vspace{0pt}
  \end{center}
- \addcontentsline{toc}{chapter}{\protect\noindent ABSTRACT}         % adds Abstract title into Table of Contents
+ \addcontentsline{toc}{chapter}{\protect ABSTRACT}   
+ \setlength{\parindent}{0.5in}
+% adds Abstract title into Table of Contents
  \dsp}{\clearpage}
 
 
@@ -697,12 +699,14 @@ Page\par}}
 \newlength\captionindent \captionindent=.18in
 
 \long\def\@makecaption#1#2{% Add space only if something is ...
+
    \vskip 10pt                     % 10pt vertical space above the caption
    \setbox\@tempboxa\hbox{#1. #2}%
    \ifdim \wd\@tempboxa >\hsize %#1. #2 \par         % IF longer than one line:
-     \ssp \hangindent\captionindent\noindent #1. #2\par\vspace{5pt}
+       \hangindent\captionindent\noindent\ssp #1. #2\par\vspace{5pt}
     \else                                             %   ELSE  center.
-       \hbox to\hsize{\hfil\box\@tempboxa\hfil}\vspace{5pt}    %inserts ssp
+       \hbox to\hsize{\hfil\box\@tempboxa\hfil}\vspace{5pt}  
+      %inserts 
     \fi}
 
 % These two command can be activated to leave more spaces above and below captions. 

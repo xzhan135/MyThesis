@@ -83,7 +83,7 @@ The reconstructed spectrum of $^{12}$B electron is shown in \ref{fig:B12}.
 
 \clearpage
 
-\section{Monte-Carlo Calibration Datasets}
+\Section{Monte-Carlo Calibration Datasets}
 The purpose of the comparison between Monte-Carlo and calibration data is to characterize the detector energy response, so we are able to provide trust worthy IBD prompt energy spectrum model with precisely tweaked detector response model.
 The detector response includes the LS's photoelectric effect and detector geometry influence. 
 The quenching effect, the optical properties of detector and the Cherenkov radiation induced by energetic particle can cause nonlinear energy reconstruction of incident event.
@@ -97,7 +97,7 @@ Later in this study, we will review the energy resolution as function of energy 
 The PROSPECT-G4 simulation package was utilized to simulate all of the calibration with close-to-reality detector configurations as calibration data.
 Other than the detector geometry and materials, the nonlinearity from Birks$^\prime$ quenching effect of scintillator and Cherenkov radiation induced by charged particles was simulated by PROSPECT-G4.
 
-\subsection{Nonlinearity}
+\Subsection{Nonlinearity}
 \label{sec:nonlinear}
 The energy response of LS is mainly affected by the Birks$^\prime$ law quenching and Cherenkov radiation. 
 
@@ -156,7 +156,7 @@ To simply model the detector energy scale, we adjusted the Birks$^\prime$ consta
 We performed calibration simulations for each group of the $k_B$s and $k_C$ combination and scanned through 1000 models .
 The simulation involving optical photon is not realistic regarding to the scale of MC processed, we applied the nonlinearity corrections only to the energy of geant4 steps.
 
-\subsection{Energy Resolution}
+\Subsection{Energy Resolution}
 \label{sec:resolution}
 The reconstructed resolution is a function of energy:
 \begin{equation}
@@ -167,7 +167,7 @@ where $a$ is affected by the detector geometry, $b$ is from the photostatistics 
 
 %To reduce the computer resource required for the fitter, we neglected $a$ and $c$ of the resolution function, then used MINUIT $\chi^2$ minization to find the best $b$ value, while allow $b$ change freely.
 
-\subsection{Other Energy Scale Factors}
+\Subsection{Other Energy Scale Factors}
 \label{sec:other}
 The reconstructed energy scale was initially based on the assumption that $n$ captured by $^6$Li yield 0.55 MeVee in detector. 
 The deviation of true electron equivalent energy to this estimation can induce a constant energy scale throughout the all energy. 
@@ -183,7 +183,7 @@ The 85 keV energy threshold was then applied to the calibration MC using same P2
 %Thus a higher energy threshold whose smeared lower edge is close to the 85 keV is compromising.
 %To resolve the issue with reversed data processing, an alternative energy threshold was searched from 65 to 90 keV with 5 keV steps.
 
-\subsection{Detector Geometry Simulation}
+\Subsection{Detector Geometry Simulation}
 The difference between simulated detector and the built detector could lead to disagreement in energy loss and gamma leakage between MC and data. 
 The reconstructed energy of multi-cell-hit particle is affected by the separator thickness, pinwheel rod size and all materials that the particle can possibly travel through. 
 In this work, we surveyed the thickness and material of the separator, the pinwheel rod dimensions and thickness, the inner structure inside pinwheel rods, the density and mixture of LS and calibration capsule properties, based on detector design and QA measurements.
@@ -207,7 +207,7 @@ For instance, the variation thickness of the pinwheel rode, which carries the si
 \label{fig:pinwheelthick}
 \end{figure}
 
-\subsection{Calibration Input Model}
+\Subsection{Calibration Input Model}
 The input model of radioactive calibrations was based on the decay branching from ENSDF database.
 We simulated 1 million decays individually for each nonlinearity model scanned and each of the radioactive calibrations, which is comparible to the real event rates.
 The decay branching fraction and energy scale in the simulation input are negligible.
@@ -216,7 +216,7 @@ We generated 250,000 $^{12}$B decays in simulation, which is considerably more s
 During data vs MC comparison, the $\sim$1\% energy scale uncertainty of $^{12}$B input spectrum was taken into consideration by pulling the energy scale of $^{12}$B spectrum in 1\%. 
 The uncertainty in $^{12}$B decay branching fractions are negligible.
 
-\section{Data vs Monte-Carlo Comparison}
+\Section{Data vs Monte-Carlo Comparison}
 \label{sec:dataMC}
 The MC calibration spectra was compared with data through $\chi^2$ test. 
 We generated a list of calibration MC with a variety of $k_B$ and $k_C$ as mensioned in section \ref{sec:nonlinear}. 
@@ -228,7 +228,7 @@ The MINUIT $\chi^2$ minimization method was utilized to find the best fit four p
 We performed the $\chi^2$ minimization on data-MC comparison of full-detector reconstructed energy spectra.
 The best-fit model was than demostrated by the cross-checking with the measured the single cells that are most adjacent to the gamma calibration sources.
 
-\subsection{Full Detector Spectrum Comparison}
+\Subsection{Full Detector Spectrum Comparison}
 \label{sec:fulldet}
 The full detector reconstructed energy spectrum is the distribution of the summed energy of every hit within an event cluster. 
 Each cluster is a group of hits collected by adjacent individual LS cells and the gap between each hit being less than 20 ns.
@@ -287,7 +287,7 @@ The $\chi^2$ distributions depent on $k_{B1}$ and $k_{B2}$, and $k_{B1}$ and $k_
 \newpage
 \clearpage
 
-\subsection{Single Cell Spectrum Comparison}
+\Subsection{Single Cell Spectrum Comparison}
 \label{sec:single}
 The comparing the calibration spectra measured by only the single detector cells that are mostly adjacent to the calibration source can minimize the detector geometry correlated and the 85 keV thresholding effect for us to study LS nonlinearity.
 The data and MC agreemnt in single-cell reconstructed energy is a good cross check of the full-detector best fit model.
@@ -317,7 +317,7 @@ The $\chi^2/NDF = 1425.4/584$ with the parameters nonlinearity model obtained in
 \newpage
 \clearpage
 
-\subsection{Agreement Between Calibration Campaigns}
+\Subsection{Agreement Between Calibration Campaigns}
 The energy scale model discussed in previous sections were found with combined fitting of gamma calibrations taken in April 2018, neutron calibration performed in May 2018 and ambient data. 
 Idealy, this model ought to be compatible with other calibration campaigns with same configuration. 
 Thus we applied the model to the August 2018 calibration, which includes both gamma and neutron calibrations, as a further cross check on the best fit model.
@@ -353,7 +353,7 @@ However, as shown in Figure \ref{fig:compare}, the energy scale at discrepancy i
 
 \newpage
 
-\section{Final Model and Uncertainties for the Spectrum Analysis}
+\Section{Final Model and Uncertainties for the Spectrum Analysis}
 According to Section~\ref{sec:dataMC}, we finalized the energy nonlinearity model based on the single-cell data vs. MC comparison.
 The energy scale of PROSPECT AD can be expressed as the ratio of true energy to reconstructed energy of average particle from different calibrations $E_{rec}/E_{true}$ as shown in Figure \ref{fig:escale}, which indicates at lower energy, the scale is able to vary $\sim0.8\%$ from 100\%, where 0.2\% came from energy scale fluctuation caused by nonlinearity model uncertainty, the 0.6\% will be discussed in the next paragraph.
 
