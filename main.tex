@@ -9,16 +9,11 @@
 \usepackage{xfrac} %slanted fractions
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{titlesec}
-%\usepackage{caption}
 \usepackage{subfigure}
 %\usepackage[font=singlespacing,width=.98\textwidth]{subcaption}
 \usepackage{diagbox}
 \usepackage{cite}
-%\usepackage{polyglossia}
-%\usepackage{subfig}
-%\captionsetup{format=plain,labelsep=period,indention=0.5cm}
-%\captionsetup[table]{font=singlespacing}
-%\captionsetup[figure]{font=singlespacing}
+
 \usepackage{tabularx,multirow}
 \usepackage{rotating}
 \usepackage{hyperref}
@@ -37,14 +32,13 @@
 
 \begin{document}
 
+\copyrightnoticetrue      % crate copyright page or not
 \maketitle
 
 \prelimpages
-\begin{acknowledgement}
 \pagenumbering{roman}
 \setcounter{page}{3}
-    I would love to thank everyone.
-\end{acknowledgement}
+\input{Acknowledgement.tex}
 
 \newpage
 \tableofcontents
@@ -56,18 +50,7 @@
 \listoffigures
 
 \newpage
-\begin{abstract}
-\setlength{\parindent}{0.5in}
-    Antineutrino from fission nuclear reactors has been widely studied in particle and nuclear physics.
-    In the last ten years, the antineutrino flux and spectrum was measured independently by short baseline reactor experiments. 
-    Both flux and spectrum measurements showed discrepancies comparing to theoretical models based on historical measurements and nuclear databases.
-    These discrepancies hint sterile neutrino oscillation in eV scale, as well as incomplete theoretical model. 
-    PROSPECT, the Precision Reactor Oscillation and Spectrum experiment, was built to probe a sterile neutrino oscillation and precisely measure reactor antineutrino spectrum from a high $^{235}$U enrichment reactor.
-    PROSPECT antineutrino detector is an optically segmented liquid scintillation detector deployed at 7~m to 9~m from the HFIR reactor at ORNL.
-    To characterize the nonlinear detector energy response, a unique calibration and analysis strategy was made to overcome the typical challenge brought by particle multi-segment scatterings in PROSPECT detector.
-    This dissertation details the analysis to calibrate the energy scale of PROSPECT antineutrino detector and PROSPECT's measurement antineutrino spectrum from $^{235}$U reactor.
-    
-\end{abstract}
+\input{Abstract.tex}
 
 \textpages
 \pagenumbering{arabic}
@@ -87,6 +70,8 @@
 \input{Chapter7.tex}
 
 \input{Chapter8.tex}
+
+\input{Chapter9.tex}
 
 \bibliographystyle{ieeetr}
 \bibliography{reference}

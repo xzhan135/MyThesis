@@ -33,7 +33,7 @@
     \hline
     \end{tabular}
 
-\label{tab:HIFR}
+\label{tab:HFIR}
 \end{table}
 
 \begin{figure}
@@ -53,7 +53,8 @@
     The HFIR facility also brought unique challenge of background for neutrino measurement. 
     Because of the very short baseline requirement of the experiment and availability of the experiment site, the PROSPECT AD is exposed to cosmic ray background with minimal overburden. 
     The detector also faces reactor correlated background, e.g. the neutron background generated from reactor and the $\gamma$ ray background from the metallic materials in the piping of the facility.
-    A comprehensive background characterization is therefore organized in the research and development (R\&D) phase of PROSPECT~\cite{bib:prospect_background}. 
+    A comprehensive background characterization is therefore organized in the research and development (R\& D) phase of PROSPECT~\cite{bib:prospect_background}. 
+    As a result, the amplitude of the gamma and neutron background is shown in Figure~\ref{fig:prospect_background}.
     The detector and additional background shielding was designed based on the by this background survey.
     
 \begin{figure}
@@ -89,6 +90,7 @@
     Segments & 14 horizontal $times$ 11 vertical \\
     Segment dimension & 1.176\,m wide $\times$ 14.5~cm long  $\times$ 14.5~cm tall \\
     Light collection & diameter = 12.7~cm (5~inch) PMTs\\
+    Position resolution & $\sigma_X$ = 14.5~cm,  $\sigma_Y$ = 14.5~cm,  $\sigma_Z \approx$ 5~cm \\
     \hline
     \end{tabular}
     \label{tab:PROSPECT_AD}
@@ -105,7 +107,8 @@
 \end{figure}
     
     The anatomy of the PROSPECT AD is shown in Figure~\ref{fig:PROSPECT_AD}.
-    The inner volume of detector is contained in a liquid tight acrylic vessel filled with the $^{6}$LiLS, which is made from an EJ-309 base, an organic LS \cite{bib:lspaper}.
+    The inner volume of the detector is contained in a liquid tight acrylic tank filled with the $^{6}$LiLS, which is made from the EJ-309 base, an organic LS \cite{bib:lspaper}.
+    The acrylic tank shielded by layers of water, polyethylene, lead, borated polyethylene, respectively, from the exterior layer to interior to suppress neutron and gamma background.
     The designed energy resolution is 4.5\% to optimize PROSPECT's IBD spectrum measurement.
     An advantage of utilizing the EJ-309 is the pulse shape discrimination (PSD) feature making the PROSPECT AD sensitive to particle identity, which is described in detail in Section~\ref{sec:detection}.
     The $^{6}$Li is loaded as a main neutron capture isotope.
@@ -125,30 +128,118 @@
     The ends of each segments are enclosed by two diameter = 12.7~cm photomultiplier tubes (PMTs).
     The schematics of the PROSPECT AD inner volume is shown in Figure~\ref{fig:active_volume}.
     The segment with largest LS light yield is identified as the interaction point (x- and y-direction) of an incident particle.
-    The readout of PMT housed in mineral-oil filled acrylic modules (PMT optical modules) on both sides of each segment, allowing for timing- and charge-based position reconstruction along the axis (z-direction) of each segment~\cite{bib:prospect_50, bib:P20}.
+    The readout of PMT housed in mineral-oil filled acrylic modules (PMT optical modules) on both sides of each segment, allowing for timing- and charge-based position reconstruction along the axis (z-direction) of each segment~\cite{bib:P50, bib:P20}.
     Hence, the optical grid made PROSPECT AD able to reconstruct incident particles' track and 3D position, which is an essential function for the cosmic ray rejection and the oscillation measurement in the baseline between 7~m to 9~m.
     
-\begin{figure}
+\begin{figure}[h]
     \centering
     %\vspace{0pt}
-    \includegraphics[width=0.7\textwidth]{Figures/DetectorDesign.pdf}
+    \includegraphics[width=0.7\textwidth]{Figures/PROSPECTAD_active.pdf}
     \caption[The inner volume of the PROSPECT AD]{The schematic of the inner volume of the PROSPECT AD.
     (Top) A side view to the X,Y plain of the AD, the red grids represent segments assembled with ET PMTs and the light blue grids represent segments with Hamamatsu PMTs.
     (Bottom) A schematic of a single segment.
     }
-    \label{fig:PROSPECT_AD}
+    \label{fig:active_volume}
 \end{figure}
-    
+
 \Section{Antineutrino Detection}
 \label{sec:detection}
 
-\Section{Optical Grid}
-\label{sec:OG}
+\Subsection{IBD signature}
+	Same as other reactor neutrino experiments, PROSPECT detect \nuebar through the detection of the positron and neutron produced in the IBD process
+	\begin{equation}
+        \nuebar + p \rightarrow n + e^+.
+    \end{equation}	    
+	The positron deposit its kinetic energy immediately in the LS by transferring the kinetic energy to molecular energy that generate scintillation light, whose process is described in detail in Chapter~\ref{Ch5}.
+	After being losing most of its kinetic energy, positron-electron annihilation produces two 511~keV gamma toward two opposite directions. 
+	The IBD produced neutron with keV scale kinetic energy is decelerated within 50~\textmu s until being captured by the nucleus in the LS. 
+	The main neutron capturing isotope in the PROSPECT AD is $^6$Li with more than 80\% of neutron capture fraction.
+	The $n$-Li capture process,
+	\begin{equation}
+       	n+^6\textrm{Li} \rightarrow \alpha + ^3\textrm{H},
+    \end{equation}
+    brought an advantage for PROSPECT that the event signature includes only the recoil of $\alpha$ and $^3$H nuclei without energy loss. 
+    On the contrary, most of the historical reactor neutrino experiments utilizing Gd as the neutron capture solvent have to tag the neutron signal as a cascaded of $\gamma$ ray with total energy of approximately 8~MeV.
+ 	The scintillation signal of the IBD produced positron and its annihilation gammas is detected in 10~ns scale after the IBD process, followed by the $\sim$50~\textmu s delayed neutron capture signal. 
+ 	Hence, the positron and neutron signals are referred as prompt and delayed signals, respectively.
+	A schematic of the IBD signals in PROSPECT is shown in Figure~\ref{fig:IBDscheme}.
+\begin{figure}[h]
+    \centering
+    %\vspace{0pt}
+    \includegraphics[width=0.7\textwidth]{Figures/IBDSchematic.pdf}
+    \caption[IBD detection schematic]{The schematic of the IBD detection in PROSPECT AD.]
+	An IBD event is tagged with the time coincidence between the positron and the neutron events.
+	The positron deposits its energy and annihilate in $\sim$10~ns after IBD process.
+	Wthin $\sim$50~\textmu s after the IBD process, the neutron is mainly captured by $^6$Li, generating $\alpha$ and tritium with total kinetic energy of 4.78~MeV (0.55~MeV electron equivalent).}
+    \label{fig:IBDscheme}
+\end{figure}
 
-\Section{Background Shielding}
-
-\Section{Calibration System}
-
-\Section{Detector Construction and Commissioning}
-
-\Section{Data Acquisition}
+\Subsection{Prompt and Delayed Signal Discrimination}
+	PROSPECT discriminate the prompt and delayed signal with PSD. 
+	The pulse shape of scintillation light in EJ-309 contains short lived and long lived fluorescence components whose fractions in the light pulse are dependent on the $dE/dx$ of exciting particle. 
+	Since the $dE/dx$ of charged nuclei is greater than the positrons and electrons, a significant difference of pulse shapes between the prompt and the delayed signals is shown as Figure~\ref{fig:PSD}.
+	\begin{figure}[h]
+    \centering
+    %\vspace{0pt}
+    \includegraphics[width=0.6\textwidth]{Figures/PSD.pdf}
+    \caption[Pulse shape difference]{
+	An example of the different pulse shape between gamma-ray like signal and neutron like signal.
+	}
+    \label{fig:PSD}
+	\end{figure}
+	For the ease of signal discrimination, a PSD parameter is defined as the tail fraction of the pulse integral, 
+	\begin{equation}
+       	\textrm{PSD} = \frac{Q_\textrm{tail}}{Q_\textrm{full}}.
+    \end{equation}
+    With the event selection based on the reconstructed energy, timing and PSD value of a pulse, clear signal types can be distinguished as shown in Figure~\ref{fig:PSDvEvT}.
+    	\begin{figure}[h]
+    \centering
+    %\vspace{0pt}
+    \includegraphics[width=0.48\textwidth]{Figures/PSDvE.pdf}
+    \includegraphics[width=0.48\textwidth]{Figures/PSDvT.pdf}
+    \caption[Event selection based on PSD]{
+    	(Left) The distribution of $^{252}$Cf neutron and gamma events in a energy and PSD parameter space.
+    	A well constrained distibution of $n$-Li capture can be seen at the low energy high PSD spot.
+    	(Right) The distribution of prompt-delay pair event in the PSD and time coincidence parameter space, where the top left spot is the distribution of IBD candidates.
+	}
+    \label{fig:PSDvEvT}
+	\end{figure}
+	
+\Subsection{Energy and Position Reconstruction}
+	PROSPECT AD is a segmented detector where particles with enough energy can travel through multiple segments.
+	The energy of a particle deposit in each segment is reconstructed with respect to the light collected by the PMTs on both ends.
+	When both PMTs of a segment is triggered to collect light, the recorded signal by the segment is referred as a \textit{hit}.
+	An event \textit{cluster} is defined as a group of hits in a 20~ns time interval between every two hits. 
+	The reconstructed energy of a particle is the sum of energy deposit in all segments of a cluster, as illustrated in Figure~\ref{fig:ClusterScheme}.
+	The reconstructed event vertex's (X, Y) position is defined as the location of the segment with largest energy deposition in a cluster.
+\begin{figure}[h]
+    \centering
+    %\vspace{0pt}
+    \includegraphics[width=0.6\textwidth]{Figures/ClusterScheme.pdf}
+    \caption[An illustration of an event cluster]{
+	An illustration of an event cluster. The colored segments are segments collected scintillation light within a clusters time window.
+	The reconstructed energy of this event is the summed energy detected by each segment hit in this cluster.
+	The size and color of each colored box is correlated to the light collected in each PMT.
+	The reconstructed positron is in the segment with largest light collection.
+	}
+    \label{fig:ClusterScheme}
+\end{figure}
+	
+	An event vertex's Z position is reconstructed based on the charge and timing difference between the pair of PMTs' light signal.
+	The schematic of a single segment light collection is shown in Figure~\ref{fig:Zreconstruction}.
+	Because of the light attenuation in the LS, the light collection by a PMT at one end decreases exponentially with increasing distance from that PMT to the vertex, resulting in the segments total light collection non-uniformity along the Z direction.
+	The detection timing difference between the PMTs is also dependent on the Z position, making it a useful tool in Z positrion reconstruction.
+	Further discussion about the Z position calibration is detailed in Chapter~\ref{Ch6}.
+	
+\begin{figure}[h]
+    \centering
+    %\vspace{0pt}
+    \includegraphics[width=0.6\textwidth]{Figures/Z_reconstruction.pdf}
+    \caption[A schematic of a single segment light collection ]{
+	A schematic of the light collection within one segment. 
+	When scintillation light was generated from an incident particle particle, the light is constrained in the segment by the specular reflective separators.
+	The two PMTs on the ends detect different light and at different time with respect to the vertex location.
+	}
+    \label{fig:Zreconstruction}
+\end{figure}
+	
