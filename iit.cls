@@ -575,11 +575,11 @@ Page\par}}
 
 \def\listofsymbols{
  \begin{center}
- \tsp{LIST OF SYMBOLS\\}
+ \tsp{LIST OF ABREVIATIONS\\}
  \end{center}
  \ssp
- \hbox{\protect\makebox[1.5cm][c]{Symbol}\hspace{3cm}\makebox[10cm][l]{Definition}}
- \addcontentsline{toc}{chapter}{\noindent LIST OF SYMBOLS}  %OK
+ \hbox{\protect\makebox[1.5cm][c]{Abreviation/Symbol}\hspace{5cm}\makebox[10cm][l]{Definition}}
+ \addcontentsline{toc}{chapter}{\noindent LIST OF ABREVIATIONS}  %OK
 }
 
 
@@ -593,7 +593,7 @@ Page\par}}
 \newcommand{\SymbolDefinition}[2]{
   \noindent
 % \hbox{\protect\makebox[1.5cm][c]{#1}\hspace{1cm}\makebox[10cm][l]{#2}}
-  \protect\makebox[1.5cm][c]{#1}\hspace{1cm}\parbox[t]{11cm}{#2}
+  \protect\makebox[1.5cm][c]{#1}\hspace{3cm}\parbox[t]{11cm}{#2}
   \par\vspace{5pt}
  }
 

@@ -9,36 +9,61 @@
 \usepackage{xfrac} %slanted fractions
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{titlesec}
+\usepackage{placeins}
+%\usepackage{caption}
 \usepackage{subfigure}
 %\usepackage[font=singlespacing,width=.98\textwidth]{subcaption}
 \usepackage{diagbox}
 \usepackage{cite}
-
+%\usepackage{polyglossia}
+%\usepackage{subfig}
+%\captionsetup{format=plain,labelsep=period,indention=0.5cm}
+%\captionsetup[table]{font=singlespacing}
+%\captionsetup[figure]{font=singlespacing}
 \usepackage{tabularx,multirow}
 \usepackage{rotating}
 \usepackage{hyperref}
 \usepackage{mathrsfs}
 \usepackage[toc,page]{appendix}
 \usepackage[export]{adjustbox}
+\usepackage{mhchem} % for equations involving isotopes
+\usepackage{longtable}
+\usepackage{acro}
+
 
 \newcommand{\nuebar}{\ensuremath{\overline{\nu }_{e}}\hspace{1pt}}
 \newcommand{\Ulow}{\ensuremath{^{235}\textrm{U}}\hspace{1pt}}
 
+\DeclareAcronym{un}{
+  short = AD ,
+  long  = Antineutrino Detector ,
+  class = abbrev
+}
+
+
 \author{Xianyi Zhang}
 \degree{Doctor of Philosophy}
 \dept{Department of Physics}
-\title{Energy Scale Study for PROSPECT's Measurement of $^{235}$U Antineutrino Spectrum}
-\date{July 2019}
+\title{Energy Scale Study for PROSPECT's Measurement of the Antineutrino Spectrum of $^{235}$U}
+\date{August 2019}
 
 \begin{document}
 
-\copyrightnoticetrue      % crate copyright page or not
 \maketitle
 
 \prelimpages
+\begin{acknowledgement}
+
 \pagenumbering{roman}
 \setcounter{page}{3}
-\input{Acknowledgement.tex}
+The accomplishment of this thesis research is with the help of many. Firstly, I give my special thanks to professor Bryce Littlejohn, my thesis advisor. Being both a mentor and a friend, he shared precious physics knowledge with me and set a great example for a young scientist. I am also grateful for professor Christ White, for accepting me to the IIT neutrino physics group and funding my thesis research. I would also like to thank Pranava Teja Surukuchi, who has been a great friend of mine. Pranava's enthusiasm has been a spur through my student life at IIT.
+
+Other young scientists in PROSPECT collaboration, Karin Gilje, Tom Lanford, and Michael Mendenhall, have inspired me with their professionality. They also offered great help in my research with their skill and knowledge. Danielle Berish, Ben Foust, Jeremy Gaison, Adam Hansell, Olga Kyzylova, Jeremy Lu and Danielle Norcini are fantastic companions, who shared work of all aspects with me. I am thankful to  Nathaniel Bowden, David Jaffe, Pieter Mumm, Minfang Yeh, and Chao Zhang for their valuable advice in my research. 
+
+I owe my great thanks to my parents, Huiqian Zhu and Caodaobaiyin, for selflessly supporting me.
+At last, I cannot thank Danyang Wang enough for her love and courage.
+    
+\end{acknowledgement}
 
 \newpage
 \tableofcontents
@@ -50,7 +75,57 @@
 \listoffigures
 
 \newpage
-\input{Abstract.tex}
+\listofsymbols
+\SymbolDefinition{ADC}{Analog-Digital Converter}
+\SymbolDefinition{BNL}{Brookhaven National Laboratory}
+\SymbolDefinition{BiPo}{Bismuth-Polonium decay}
+\SymbolDefinition{CC interaction}{Charged Current interaction}
+\SymbolDefinition{DAQ}{Data AcQuisition}
+\SymbolDefinition{ENSDF}{Evaluated Nuclear Structure Data File}
+\SymbolDefinition{FEP}{Fluorinated Ethylene Propylene}
+\SymbolDefinition{HEU reactor}{High Enrichment $^{235}$U}
+\SymbolDefinition{HFIR}{High Flux Isotope Reactor}
+\SymbolDefinition{HV}{High Voltage}
+\SymbolDefinition{IBD}{Inverse Beta Decay}
+\SymbolDefinition{ILL}{Institut Laue-Langevin}
+\SymbolDefinition{JENDL}{Japanese Evaluated Nuclear Data Library}
+\SymbolDefinition{LEU reactor}{Low Enrichment $^{235}$U}
+\SymbolDefinition{LLNL}{Lawrence Livermore National Laboratory}
+\SymbolDefinition{LS}{Liquid Scintillator}
+\SymbolDefinition{$^6$LiLS}{$^6$Li loaded Liquid Scintillator}
+\SymbolDefinition{MC}{Monte-Carlo simulation}
+\SymbolDefinition{NC interaction}{Neutral Current interaction}
+\SymbolDefinition{OCS}{Optical Calibration System}
+\SymbolDefinition{ORNL}{Oak Ridge National Laboratory}
+\SymbolDefinition{PE}{Photoelectron}
+\SymbolDefinition{PG4}{PROSPECT-Geant4 simulation package}
+\SymbolDefinition{PID}{Particle type Identification}
+\SymbolDefinition{PMNS matrix}{Pontecorvo-Maki-Nakagawa-Sakata matrix}
+\SymbolDefinition{PMT}{Photomultiplier Tube}
+\SymbolDefinition{PTFE}{PolyTetraFluoroEthylene}
+\SymbolDefinition{PSD}{Pulse Shape Discrimination}
+\SymbolDefinition{QC}{Quality Control}
+\SymbolDefinition{QA}{Quality Assurance}
+\SymbolDefinition{R\&D}{Research and Development}
+\SymbolDefinition{RAA}{Reactor Antineutrino Anomaly}
+\SymbolDefinition{RnPo}{Radon-Polonium decay}
+\SymbolDefinition{S:B}{Signal to Background ratio}
+\SymbolDefinition{UV}{Ultraviolet}
+\SymbolDefinition{ZLE}{Zero Length Encoding}
+
+\newpage
+\begin{abstract}
+
+    Neutrinos from nuclear fission reactors have been widely studied in particle and nuclear physics.
+    In the last ten years, the antineutrino flux and spectrum were measured independently by short baseline reactor experiments. 
+    Both flux and spectrum measurements showed discrepancies compared to theoretical models based on historical measurements and nuclear databases.
+    These discrepancies hint at sterile neutrino oscillation at the eV mass scale, as well as an incomplete theoretical model. 
+    PROSPECT, the Precision Reactor Oscillation and Spectrum experiment, was built to probe for sterile neutrino oscillations and precisely measure the reactor antineutrino spectrum from a highly $^{235}$U enriched reactor.
+    The PROSPECT antineutrino detector is an optically segmented liquid scintillator detector deployed at seven~meter to nine~meter from the High Flux Isotope Reactor at Oak Ridge National Laboratory.
+    This dissertation details the analysis to calibrate the energy scale of the PROSPECT antineutrino detector, an essential step for both the oscillation and spectrum measurements. 
+    To characterize the nonlinear detector energy response, a unique calibration and analysis strategy was developed to overcome challenges brought on by particle multi-segment scattering within the PROSPECT detector.
+    With the calibrated scale for energy reconstruction, PROSPECT measured of the antineutrino spectrum from a $^{235}$U-burning reactor.
+\end{abstract}
 
 \textpages
 \pagenumbering{arabic}
@@ -72,6 +147,8 @@
 \input{Chapter8.tex}
 
 \input{Chapter9.tex}
+
+\input{Chapter10.tex}
 
 \bibliographystyle{ieeetr}
 \bibliography{reference}

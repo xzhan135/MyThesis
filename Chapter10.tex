@@ -1,0 +1,46 @@
+\Chapter{Conclusion}
+\label{Ch10}
+
+The PROSPECT experiment was built to directly measure the $^{235}$U generated antineutrino energy spectrum.
+The experiment also relies on measuring relative spectral difference at various baselines to probe the short baseline oscillations involving a sterile neutrino.
+Its short baseline measurement at HFIR contains challenges of high reactor correlated and cosmic ray backgrounds. 
+The PROSPECT AD was therefore designed as an optically segmented LS target for accurate reconstruction of particle tracks and vertex positions.
+High precision fabrication and 3D printing were applied to build the optical grid subsystem, in order to minimize the dead volume of the liquid scintillator detector.
+The interlocking between the PLA rods and separators allows exclusive features for the calibration source insertion and event position calibration.
+After approximately one year of component fabrication and detector construction, the PROSPECT AD was commissioned in February 2018.
+
+As a vital step for the \Ulow spectrum measurement, energy scale calibration - setting the relationship between neutrino energy and reconstructed IBD energy - presented unique challenge because of the segmented nature of the PROSPECT AD. 
+Energy and hit loss in the detector, as well as the Birks' quenching and Cherenkov effects in the scintillator light yield were studied exhaustively with radioactive calibration sources and ambient particle interactions.
+The dependence between cluster energy and segment multiplicity of a particle requires simulation of complicated nonlinear effects and detector structure to characterize the full detector response. 
+The $\frac{dE}{dx}$ calculated by Geant4 enables simplification of the nonlinear effect simulation.
+By fitting multiple calibration sources' data with MC simulation simultaneously, the best-fit energy response model was constrained with sub-1\% energy scale uncertainty.
+Significant computing resources were used in this parameter searching process.
+Subsequent variations of event reconstruction dependent on time and position were quantified and removed.
+
+PROSPECT measured the IBD prompt energy spectrum from HFIR with $\sim$78~exposure days and collected 31678$\pm$304 reactor correlated neutrino events on the Earth's surface, with S:B = 1.7:1.
+The Huber spectrum model with corrections specific for HFIR was compared to the PROSPECT measured spectrum. 
+With current statistics, the PROSPECT measured spectrum was found to be compatible with both Huber and the ``equal isotope" hypothesis with relatively high $\chi^2/\mathrm{NDF}$, and disfavored the ``all $^{235}$U" hypothesis at $2.1\sigma$.
+
+\Section{Personal Contribution}
+
+My personal contributions to PROSPECT's reactor neutrino spectrum include:
+\begin{itemize}
+	\item During the early detector R\&D with prototypes, I participated the prototype construction, tested different configurations of the optical grid components to ensure their material compatibility and superior optical property, and developed detector calibration analysis programs in preparations of full detector calibration.
+	\item I co-led the efforts of the optical grid fabrication, construction and QC/QA measurements.
+	\item As a core member for the PROSPECT AD construction, I developed the procedures for the optical grade construction.
+	\item During detector installation and commissioning, I participated the detector filling work, and was responsible for characterizing detector performance with PROSPECT's initial wet commissioning and calibration data.
+	\item I led the collaboration effort of detector energy scale calibration. This work involves equally significant effort of adjusting the PG4 simulation of detector response and reconstruction of calibration events with various interactions.
+	\item I conducted studies of quantifying systematic uncertainties of the PROSPECT AD's energy response.
+	\item I was also deeply involved in identifying the IBD event selection cuts.
+\end{itemize}
+
+\Section{Possible Improvement of This Work}
+
+The energy scale study for the PROSPECT spectrum measurement can be further improved by including the AmBe calibrations and BiPo energies into the data-MC comparison for parameter searching. 
+This work requires better modeling of the AmBe calibration source and the beta energy from Bi in the PG4 simulation.
+The simulation of effective Cherenkov light can be adjusted with more realistic modeling of light transmission and indices of refraction.
+The density of $^6$LiLS, a key factor of particle stopping power, was simulated according to measurements with a prototype detector.
+A re-measurement of target density with realized PROSPECT detector is likely warranted.
+
+Regarding to PROSPECT's reactor neutrino spectrum measurement, the AD has been collecting more reactor-on and -off data to further improve the precision of the spectrum measurement.
+Joint spectrum analysis between PROSPECT and other LEU experiments will be significantly helpful in searching for the isotopic contributions of the reactor neutrino spectrum shape discrepancy.
